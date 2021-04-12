@@ -1,0 +1,11 @@
+{
+  "name": "@react-hooks/button",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@react-types/shared": "workspace:packages/@react-types/shared",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17"
+  }
+}

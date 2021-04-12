@@ -1,0 +1,13 @@
+{
+  "name": "@react-fraction/button",
+  "dependencies": {
+    "@react-fraction/private": "workspace:packages/@react-fraction/private",
+    "@react-fraction/utils": "workspace:packages/@react-fraction/utils",
+    "@react-hooks/button": "workspace:packages/@react-hooks/button",
+    "@react-types/button": "workspace:packages/@react-types/button",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17"
+  }
+}

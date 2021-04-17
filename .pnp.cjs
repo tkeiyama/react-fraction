@@ -106,6 +106,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-standard", "virtual:d725fd27d7e353f8d7da39d5966d048bb34e32c282fb01f1c23a7bc255d990faf627067bf82713d3d3fea374ada55c00ee73186e22a6869ac7fb9c95e2316b82#npm:5.0.0"],
             ["eslint-plugin-tsdoc", "npm:0.2.11"],
             ["eslint-plugin-typescript-sort-keys", "virtual:d725fd27d7e353f8d7da39d5966d048bb34e32c282fb01f1c23a7bc255d990faf627067bf82713d3d3fea374ada55c00ee73186e22a6869ac7fb9c95e2316b82#npm:1.6.0"],
+            ["husky", "npm:6.0.0"],
             ["jest", "npm:26.6.3"],
             ["postcss", "npm:8.2.10"],
             ["prettier", "npm:2.2.1"],
@@ -13548,6 +13549,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["husky", [
+        ["npm:6.0.0", {
+          "packageLocation": "./.yarn/cache/husky-npm-6.0.0-384872ea98-db6da76a67.zip/node_modules/husky/",
+          "packageDependencies": [
+            ["husky", "npm:6.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["iconv-lite", [
         ["npm:0.4.24", {
           "packageLocation": "./.yarn/cache/iconv-lite-npm-0.4.24-c5c4ac6695-bd9f120f5a.zip/node_modules/iconv-lite/",
@@ -18387,6 +18397,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-standard", "virtual:d725fd27d7e353f8d7da39d5966d048bb34e32c282fb01f1c23a7bc255d990faf627067bf82713d3d3fea374ada55c00ee73186e22a6869ac7fb9c95e2316b82#npm:5.0.0"],
             ["eslint-plugin-tsdoc", "npm:0.2.11"],
             ["eslint-plugin-typescript-sort-keys", "virtual:d725fd27d7e353f8d7da39d5966d048bb34e32c282fb01f1c23a7bc255d990faf627067bf82713d3d3fea374ada55c00ee73186e22a6869ac7fb9c95e2316b82#npm:1.6.0"],
+            ["husky", "npm:6.0.0"],
             ["jest", "npm:26.6.3"],
             ["postcss", "npm:8.2.10"],
             ["prettier", "npm:2.2.1"],
@@ -25492,7 +25503,6 @@ class ZipFS extends BasePortableFakeFS {
   readFileBuffer(p, opts = {
     asyncDecompress: false
   }) {
-    if (typeof p !== `string`) throw EBADF(`read`);
     const resolvedP = this.resolveFilename(`open '${p}'`, p);
     if (!this.entries.has(resolvedP) && !this.listings.has(resolvedP)) throw ENOENT(`open '${p}'`); // Ensures that the last component is a directory, if the user said so (even if it is we'll throw right after with EISDIR anyway)
 
